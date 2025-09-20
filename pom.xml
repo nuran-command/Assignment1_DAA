@@ -24,11 +24,21 @@
     </dependencies>
     <build>
         <plugins>
-            <!-- Surefire отвечает за запуск тестов mvn test -->
+            <!-- Compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version> <!-- must be >=3.11.0 for Java 23 -->
+                <configuration>
+                    <release>23</release>
+                </configuration>
+            </plugin>
+
+            <!-- Surefire for JUnit 5 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.1.2</version> <!-- пример; нужна версия, которая поддерживает JUnit Platform -->
+                <version>3.1.2</version>
             </plugin>
         </plugins>
     </build>
