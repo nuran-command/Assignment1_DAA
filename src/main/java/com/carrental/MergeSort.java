@@ -10,7 +10,7 @@ public class MergeSort {
     }
 
     // Recursive mergesort with cutoff to insertion sort
-    private static void mergeSort(int[] arr, int[] buffer, int left, int right) {
+    public static void mergeSort(int[] arr, int[] buffer, int left, int right) {
         // Small-n cutoff: use insertion sort
         if (right - left < 16) {
             insertionSort(arr, left, right);
