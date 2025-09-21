@@ -1,0 +1,13 @@
+Algorithm,n,Time(ms),Comparisons,MaxRecursionDepth
+MergeSort,100,0,18,668,4
+QuickSort,100,0,32,722,12
+DeterministicSelect,100,3,08,N/A,N/A
+ClosestPair,100,2,07,N/A,N/A
+MergeSort,1000,0,66,10324,7
+QuickSort,1000,0,87,11283,20
+DeterministicSelect,1000,1,56,N/A,N/A
+ClosestPair,1000,5,31,N/A,N/A
+MergeSort,5000,1,87,58438,10
+QuickSort,5000,1,04,70095,30
+DeterministicSelect,5000,3,70,N/A,N/A
+ClosestPair,5000,20,21,N/A,N/A
