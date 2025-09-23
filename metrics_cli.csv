@@ -1,3 +1,4 @@
 Algorithm,n,Time(ms),Comparisons,MaxRecursionDepth
 MergeSort,1000,0,912,10285,7
 QuickSort,5000,2,153,67652,29
+QuickSort,5000,2,230,70842,27
