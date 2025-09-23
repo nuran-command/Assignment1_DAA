@@ -20,6 +20,8 @@ The goal is to analyze running-time, recursion depth, and comparisons, and compa
 - **Small-n cutoff**: MergeSort and QuickSort switch to insertion sort for n < 16.
 - **MergeSort buffer**: reusable array to avoid repeated allocations.
 - Algorithms are implemented in `src/main/java/com/carrental/`.
+- QuickSort always recurses into the smaller partition first, ensuring the recursion depth never exceeds O(log n), even in worst-case input distributions.
+- The Closest Pair algorithm maintains arrays sorted by both x- and y-coordinates, which avoids repeated sorting and extra memory allocations in each recursion step.
 
 ---
 
@@ -34,14 +36,19 @@ The goal is to analyze running-time, recursion depth, and comparisons, and compa
 - Expected recurrence: T(n) = T(n/2) + Θ(n)
 - Worst-case avoided by randomized pivot → expected Θ(n log n)
 - Recursion depth bounded (~2*log2 n).
+- In the worst case, QuickSort can degrade to Θ(n²) if partitions are unbalanced, but randomized pivot selection makes this probability extremely small.
 
 **Deterministic Select (Median-of-Medians)**
 - Recurrence: T(n) = T(n/5) + T(7n/10) + Θ(n) → Θ(n)
 - Benchmark confirms linear-time performance.
+- The T(n/5) comes from computing medians of groups of 5, and T(7n/10) reflects the worst-case size of the partition guaranteed by the pivot.
+- Although slower in practice due to overhead, it guarantees linear time even in the worst case.
 
 **Closest Pair of Points**
 - Recurrence: T(n) = 2T(n/2) + Θ(n) → Θ(n log n)
 - Verified against O(n²) brute-force on small datasets.
+- After splitting, the merge step checks at most 7–8 neighboring points in the “strip” region for each candidate, which keeps the merge linear.
+- Benchmarks confirm Θ(n log n) scaling when compared against the brute-force O(n²) method for small n.
 
 ---
 
