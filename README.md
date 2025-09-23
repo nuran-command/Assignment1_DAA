@@ -72,6 +72,17 @@ QuickSort: time=1,02 ms | comparisons=68644, maxDepth=27
 DeterministicSelect (median): time=3,03 ms
 ClosestPair: time=31,38 ms
 
+## Results
+
+### Time vs n
+![Time vs n](time_vs_n.png)
+
+### Comparisons vs n
+![Comparisons vs n](comparisons_vs_n.png)
+
+### Recursion Depth vs n
+![Recursion Depth vs n](depth_vs_n.png)
+
 ---
 
 ## Summary
