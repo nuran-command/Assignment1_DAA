@@ -111,3 +111,7 @@ mvn test
 
 # run benchmark
 mvn exec:java -Dexec.mainClass="com.carrental.Benchmark"
+
+#run Main(cli)
+mvn compile exec:java -Dexec.mainClass="com.carrental.Main" -Dexec.args="mergesort 1000"
+mvn compile exec:java -Dexec.mainClass="com.carrental.Main" -Dexec.args="quicksort 5000"
